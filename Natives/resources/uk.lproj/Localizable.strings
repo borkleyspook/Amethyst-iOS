@@ -47,7 +47,7 @@
 "custom_controls.button_edit.stroke_width" = "Товщина штриха (%)";
 "custom_controls.button_edit.stroke_color" = "Колір контуру";
 "custom_controls.button_edit.corner_radius" = "Радіус округлення (%)";
-"custom_controls.button_edit.opacity" = "Невиразність (%)";
+"custom_controls.button_edit.opacity" = "Непрозорість (%)";
 "custom_controls.button_edit.visibility" = "Видимість";
 
 "custom_controls.button_menu.add_subbutton" = "Додати підкнопку";
@@ -264,7 +264,7 @@
 "preference.title.debug_auto_correction" = "Автовиправлення";
 "preference.detail.debug_auto_correction" = "Увімкнути автоматичне виправлення при введенні тексту у грі.";
 "preference.title.debug_hide_home_indicator" = "Сховати кнопку «Додому»";
-"preference.detail.debug_hide_home_indicator" = "Це вимкне блокування кнопки \"Додому\". Ви повинні використовувати Guided Access, щоб ховати та блокувати кнопку \"Додому\" за один раз.";
+"preference.detail.debug_hide_home_indicator" = "Це вимкне блокування кнопки «Додому». Ви повинні використовувати Guided Access, щоб ховати та блокувати кнопку «Додому» за один раз.";
 
 "preference.profile.title.name" = "Ім'я";
 "preference.profile.title.loader_type" = "Тип завантажувача";
