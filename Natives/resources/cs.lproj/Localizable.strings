@@ -205,10 +205,13 @@
 "preference.title.default_gamepad_ctrl" = "Nastavení ovladače";
 "preference.title.hardware_hide" = "Skrýt ovládací prvky při připojení zařízení";
 "preference.detail.hardware_hide" = "Povolte pro automatické vypínání překrytí na obrazovce při připojení myši či herního ovladače.";
+"preference.title.recording_hide" = "Skrýt ovládací prvky při nahrávání obrazovky";
+"preference.detail.recording_hide" = "Skryje ovládací prvky ze snímků obrazovky a nahrávání obrazovky, zatímco zůstanou viditelné na obrazovce.";
 "preference.title.gesture_mouse" = "Gesta myši";
 "preference.detail.gesture_mouse" = "Povolí gesta, například kliknutím umístit blok, podržením zníčit blok a posouvání dvěma prsty";
 "preference.title.gesture_hotbar" = "Gesta hotbaru";
 "preference.detail.gesture_hotbar" = "Povolí gesta, například dotknutí se slotu hotbaru, vyměnění předměty mezi rukama a zahození předmětů";
+"preference.title.disable_haptics" = "Vypnout hmatovou odezvu";
 "preference.title.press_duration" = "Trvání dlouhého stisku (ms)";
 "preference.detail.press_duration" = "Délka trvání dlouhého držení ke zničení bloků a vyhazování itemů.";
 "preference.title.button_scale" = "Měřítko tlačítka na obrazovce (%)";
@@ -228,6 +231,8 @@
 "preference.detail.gyroscope_invert_x_axis" = "Obrací osu X gyroskopu";
 "preference.title.gyroscope_sensitivity" = "Citlivost gyroskopového ovládání";
 "preference.detail.gyroscope_sensitivity" = "Upravit citlivost gyroskopového ovládání";
+
+"preference.title.manage_runtime" = "Spravovat prostředí";
 "preference.title.confirm.delete_runtime" = "%@ bude odstraněno";
 "preference.manage_runtime.header.default" = "Preferovaná verze Javy";
 "preference.manage_runtime.default.1165" = "1.16.5 a starší";
@@ -235,6 +240,7 @@
 "preference.manage_runtime.footer.default" = "Minecraft 1.16.5 a starší může běžet s novější verzí Javy, ale není zaručena kompatibilita s módy. Externí běh může být umístěn do složky „java_runtimes“. Změna verze Javy pro „Spustit .jar“ se projeví pouze v případě, že instalační program neočekává novější verzi Javy.";
 "preference.manage_runtime.footer.java8" = "Toto je výchozí verze pro Minecraft 1.16.5 a starší.";
 "preference.manage_runtime.footer.java17" = "Toto je výchozí verze pro Minecraft 1.17 a novější.";
+"preference.manage_runtime.header.invalid" = "Neplatná prostředí";
 
 "preference.title.java_args" = "JVM spouštěcí argumenty";
 "preference.detail.java_args" = "Předá argumenty Javě spouštějíc Minecraft. Buďte opatrní, může to způsobit pád hry byly-li upraveny neprávně.";
@@ -261,9 +267,13 @@
 "preference.detail.debug_hide_home_indicator" = "Toto vypne zamykání domovského indikátoru. Budete muset použít Guided Acces ke skrytí a zamčení domovského indikátoru najednou.";
 
 "preference.profile.title.name" = "Název";
+"preference.profile.title.loader_type" = "Typ načítače";
+"preference.profile.title.loader_vendor" = "Dodavatel načítače";
+"preference.profile.title.loader_version" = "Verze načítače";
 "preference.profile.title.version" = "Verze";
 "preference.profile.title.version_type" = "Typ verze";
 "preference.profile.title.default_touch_control" = "Dotykové ovládání";
+"preference.profile.title.default_gamepad_control" = "Nastavení gamepadu";
 
 "profile.error.name_exists" = "Profil s tímto názvem již existuje. Použijte jiný název.";
 "profile.section.instance" = "Nastavení herní instance";
