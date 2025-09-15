@@ -19,7 +19,7 @@ jobs:
           - platform: 2
             platform_name: ios
     
-    runs-on: J316sAP
+    runs-on: macos-latest
     steps:
       - name: Remove work folders
         run: |
@@ -29,6 +29,10 @@ jobs:
           rm -rf ./.??* || true
           echo "after"
           ls -lah ./
+          brew update
+          brew install make
+          brew install --cask temurin@8
+          brew install ldid
           
       - name: Checkout repository
         uses: actions/checkout@main
