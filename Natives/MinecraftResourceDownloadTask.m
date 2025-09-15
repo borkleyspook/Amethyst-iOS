@@ -315,7 +315,7 @@
 // Check if the account has permission to download
 - (BOOL)checkAccessWithDialog:(BOOL)show {
     // for now
-    BOOL accessible = [BaseAuthenticator.current.authData[@"username"] hasPrefix:@"Demo."] || BaseAuthenticator.current.authData[@"xboxGamertag"] != nil;
+    BOOL accessible = true;
     if (!accessible) {
         [self.progress cancel];
         if (show) {
