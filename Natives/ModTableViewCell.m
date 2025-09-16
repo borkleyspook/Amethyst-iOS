@@ -69,7 +69,7 @@
         _deleteButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_deleteButton setTitleColor:[UIColor systemRedColor] forState:UIControlStateNormal];
         _deleteButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        [_deleteButton setTitle:@"删除" forState:UIControlStateNormal];
+        [_deleteButton setTitle:@"Delete" forState:UIControlStateNormal];
         [_deleteButton addTarget:self action:@selector(deleteTapped) forControlEvents:UIControlEventTouchUpInside];
         _deleteButton.contentEdgeInsets = UIEdgeInsetsMake(4, 8, 4, 8);
         [self.contentView addSubview:_deleteButton];
@@ -164,7 +164,7 @@
     self.descLabel.text = mod.modDescription ?: @"";
 
     // toggle text
-    NSString *toggleTitle = mod.disabled ? @"启用" : @"禁用";
+    NSString *toggleTitle = mod.disabled ? @"Enable" : @"Disable";
     [self.toggleButton setTitle:toggleTitle forState:UIControlStateNormal];
 
     // mod icon (as before)
