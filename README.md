@@ -11,6 +11,7 @@ Amethyst is a Minecraft: Java Edition launcher for Android, iOS, and iPadOS, bas
 * Supports Forge, Fabric, OptiFine, and Quilt for you to customize the experience with supported mods.
 * Includes customizable on-screen controls, keyboard and mouse support, and game controller support.
 * Optimized for jailbroken and TrollStore devices to enable better capabilities.
+* Ely.by account and skin system, Microsoft account support, Demo mode without restrictions.
 * Microsoft account and demo mode support for logging into Minecraft.
 * ...and much more!
 
