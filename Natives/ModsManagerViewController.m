@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"管理 Mod";
+    self.title = @"Manage Mod"; 
     self.view.backgroundColor = [UIColor systemBackgroundColor];
 
     // Table view
@@ -52,7 +52,7 @@
     // Empty label
     self.emptyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.emptyLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.emptyLabel.text = @"未发现 Mod";
+    self.emptyLabel.text = @"Mod Not Found"; 
     self.emptyLabel.textAlignment = NSTextAlignmentCenter;
     self.emptyLabel.textColor = [UIColor secondaryLabelColor];
     self.emptyLabel.hidden = YES;
@@ -183,20 +183,20 @@
     NSIndexPath *ip = [self.tableView indexPathForCell:cell];
     if (!ip || (NSUInteger)ip.row >= self.mods.count) return;
     ModItem *mod = self.mods[ip.row];
-    NSString *title = mod.disabled ? @"启用 Mod" : @"禁用 Mod";
-    NSString *message = mod.disabled ? @"确定启用此 Mod 吗？" : @"确定禁用此 Mod 吗？";
+    NSString *title = mod.disabled ? @"Enable Mod" : @"Disable Mod"; 
+    NSString *message = mod.disabled ? @"Are you sure you want to enable this Mod?" : @"Are you sure you want to disable this Mod?"; 
     UIAlertController *ac = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    [ac addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+[ac addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]]; 
     __weak typeof(self) weakSelf = self;
-    [ac addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+[ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) { 
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) return;
         NSError *err = nil;
         BOOL ok = [[ModService sharedService] toggleEnableForMod:mod error:&err];
         if (!ok) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                UIAlertController *errAc = [UIAlertController alertControllerWithTitle:@"错误" message:err.localizedDescription ?: @"操作失败" preferredStyle:UIAlertControllerStyleAlert];
-                [errAc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                UIAlertController *errAc = [UIAlertController alertControllerWithTitle:@"Error" message:err.localizedDescription ?: @"Operation failed" preferredStyle:UIAlertControllerStyleAlert]; 
+                [errAc addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]]; 
                 [strongSelf presentViewController:errAc animated:YES completion:nil];
             });
         } else {
@@ -212,18 +212,18 @@
     NSIndexPath *ip = [self.tableView indexPathForCell:cell];
     if (!ip || (NSUInteger)ip.row >= self.mods.count) return;
     ModItem *mod = self.mods[ip.row];
-    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"删除 Mod" message:@"确认删除此 Mod 文件吗？此操作不可撤销。" preferredStyle:UIAlertControllerStyleAlert];
-    [ac addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Delete Mod" message:@"Are you sure you want to delete this Mod file? This action is irreversible." preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
     __weak typeof(self) weakSelf = self;
-    [ac addAction:[UIAlertAction actionWithTitle:@"删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    [ac addAction:[UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!strongSelf) return;
         NSError *err = nil;
         BOOL ok = [[ModService sharedService] deleteMod:mod error:&err];
         if (!ok) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                UIAlertController *errAc = [UIAlertController alertControllerWithTitle:@"错误" message:err.localizedDescription ?: @"删除失败" preferredStyle:UIAlertControllerStyleAlert];
-                [errAc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                UIAlertController *errAc = [UIAlertController alertControllerWithTitle:@"Error" message:err.localizedDescription ?: @"Deletion failed" preferredStyle:UIAlertControllerStyleAlert]; 
+                [errAc addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]]; 
                 [strongSelf presentViewController:errAc animated:YES completion:nil];
             });
         } else {
@@ -259,8 +259,8 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (!strongSelf) return;
                 if (!ok) {
-                    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"错误" message:err.localizedDescription ?: @"删除失败" preferredStyle:UIAlertControllerStyleAlert];
-                    [ac addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Error" message:err.localizedDescription ?: @"Deletion failed" preferredStyle:UIAlertControllerStyleAlert]; 
+                    [ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]]; 
                     [strongSelf presentViewController:ac animated:YES completion:nil];
                 } else {
                     if ((NSUInteger)indexPath.row < strongSelf.mods.count) {
